@@ -14,6 +14,6 @@ export class PainterService{
     getLaggedPainters(): Promise<Painter[]>
     {
         return new Promise<Painter[]>(resolve =>
-            setTimeOut(()=>resolve(PAINTERS), 3000));
+            setTimeout(()=>resolve(PAINTERS), 3000));
     }
 }
