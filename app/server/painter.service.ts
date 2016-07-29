@@ -11,9 +11,15 @@ export class PainterService{
         return Promise.resolve(PAINTERS);
     }
 
-    getLaggedPainters(): Promise<Painter[]>
+   /* getLaggedPainters(): Promise<Painter[]>
     {
-        return new Promise<Painter[]>(resolve =>
-            setTimeout(()=>resolve(PAINTERS), 3000));
-    }
+        var res = function miresolve(elresolver) {
+            setTimeout( () =>  elresolver, 3000);
+        }
+
+        return new Promise<Painter[]>(res);
+
+        //return new Promise<Painter[]>(resolvebis =>
+          //  setTimeout(()=>resolvebis(PAINTERS), 3000));
+    }*/
 }
