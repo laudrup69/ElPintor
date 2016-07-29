@@ -1,9 +1,11 @@
+import { Component, OnInit } from '@angular/core';
+
 import { Painter } from './painter';
 import { PainterDetailComponent } from './painter-detail.component';
 import { PainterService } from './server/painter.service';
 
 @Component({
-    directives: [PainterDetailComponet],
+    directives: [PainterDetailComponent],
     providers: [PainterService],
     selector: 'my-app',
     template: `
@@ -18,3 +20,19 @@ import { PainterService } from './server/painter.service';
         <my-painter-detail [painter]="selectedPainter"></my-painter-detail>
     `
 })
+export class AppComponent implements OnInit {
+    public painters: Painter[];
+    public selectedPainter: Painter;
+
+    constructor(private service: PainterService) { }
+
+    getPainters(): void {
+        this.service.getPainters().then(p => this.painters = p);
+    }
+
+    ngOnInit(): void {
+        this.getPainters();
+    }
+
+    onSelect(p: Painter): void { this.selectedPainter = p; }
+}
