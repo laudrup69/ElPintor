@@ -1,5 +1,5 @@
 import { Painter } from './painter';
-import { PainterDetailComponet } from './painter-detail.component';
+import { PainterDetailComponet } from './server/painter-detail.component';
 import { PainterService } from './server/painter.service';
 
 @Component({

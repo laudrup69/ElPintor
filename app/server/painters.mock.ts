@@ -1,4 +1,4 @@
-import {Painter} from './Painter';
+import {Painter} from '../Painter';
 
 export var PAINTERS: Painter[] = [
     {
