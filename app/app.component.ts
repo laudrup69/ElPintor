@@ -9,7 +9,7 @@ import { PainterService } from './server/painter.service';
     providers: [PainterService],
     selector: 'my-app',
     template: `
-        <h1><img class="logoImg" src="img/brush.png" /> Famous painters</h1>
+        <h1><img class="logoImg" src="img/brush.png" /> Pintores Famosos</h1>
         <ul class="painters">
             <li *ngFor="let p of painters"
                 [class.selected]="p === selectedPainter"

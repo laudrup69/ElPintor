@@ -9,10 +9,10 @@ import { Painter } from './painter';
         <div *ngIf="painter">
             <h2>{{painter.name}}</h2>
             <div><label>style: </label>{{painter.style}}</div>
-            <div><label>examples: </label>{{painter.examples}}</div>
+            <div><label>Ejemplos: </label>{{painter.examples}}</div>
             <div>
-                <h3>Edit</h3>
-                <label>name: </label>
+                <h3>Edición</h3>
+                <label>Nombre: </label>
                 <div><input [(ngModel)]="painter.name" placeholder="name"></div>
             </div>
         </div>
