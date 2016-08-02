@@ -11,7 +11,7 @@ import { PainterService } from './server/painter.service';
     template: `
         <h1><img class="logoImg" src="img/brush.png" /> Pintores Famosos</h1>
         <ul class="painters">
-            <li *ngFor="let p of painters"
+            <li class="items" *ngFor="let p of painters"
                 [class.selected]="p === selectedPainter"
                 (click)="onSelect(p)">
                 <span class="badge">{{p.id}}</span> {{p.name}}
